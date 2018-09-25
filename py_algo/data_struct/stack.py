@@ -23,7 +23,7 @@ class Stack(object):
         '''
         self.items.append(item)
 
-    def pop(self, item):
+    def pop(self):
         '''
         a method to pop item from the top of the stack
         '''
