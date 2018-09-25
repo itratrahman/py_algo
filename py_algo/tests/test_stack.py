@@ -8,19 +8,19 @@ class TestStack(TestCase):
     '''test class to test the stack module'''
 
     def test_isEmpty(self):
-        '''test the Stack isEmpty method'''
+        '''method to test the Stack isEmpty method'''
         s = Stack()
         self.assertTrue(s.isEmpty())
 
     def test_peek(self):
-        '''test the Stack peek mehtod'''
+        '''method to test the Stack peek mehtod'''
         s = Stack()
         s.push(4)
         s.push('dog')
         self.assertTrue(s.peek() == 'dog')
 
     def test_pop(self):
-        '''test the Stack pop method'''
+        '''method to test the Stack pop method'''
         s = Stack()
         s.push(4)
         s.push('dog')
@@ -30,7 +30,7 @@ class TestStack(TestCase):
         self.assertTrue(s.pop() == 4)
 
     def test_size(self):
-        '''test the Stack size method'''
+        '''method to test the Stack size method'''
         s = Stack()
         s.push(4)
         s.push('dog')
