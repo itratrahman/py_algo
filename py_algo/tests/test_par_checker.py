@@ -10,5 +10,9 @@ class TestParChecker(TestCase):
         '''a method to check the function par_checker'''
         self.assertTrue(par_checker('((()))'))
         self.assertTrue(par_checker('(((())))'))
+        self.assertTrue(par_checker('(()()()())'))
+        self.assertTrue(par_checker('(()((())()))'))
         self.assertFalse(par_checker('((())'))
         self.assertFalse(par_checker('(((()))'))
+        self.assertFalse(par_checker('()))'))
+        self.assertFalse(par_checker('(()()(()'))
