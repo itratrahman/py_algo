@@ -5,11 +5,14 @@ from py_algo.math import divideBy2
 class TestBaseConverters(TestCase):
 
     '''
-    A test class for testing base converters
+    Test class for testing base converters
     '''
 
     def test_divide_by_2(self):
 
+        '''
+        Test method to test the function of divideBy2
+        '''
         self.assertTrue(divideBy2(42) == "101010")
         self.assertTrue(divideBy2(300) == "100101100")
         self.assertTrue(divideBy2(255) == "11111111")
