@@ -5,22 +5,30 @@ from py_algo.data_struct import Stack
 
 class TestStack(TestCase):
 
-    '''test class to test the stack module'''
+    '''
+    Test class to test the stack module
+    '''
 
     def test_isEmpty(self):
-        '''method to test the Stack isEmpty method'''
+        '''
+        A method to test the Stack isEmpty method
+        '''
         s = Stack()
         self.assertTrue(s.isEmpty())
 
     def test_peek(self):
-        '''method to test the Stack peek mehtod'''
+        '''
+        A method to test the Stack peek mehtod
+        '''
         s = Stack()
         s.push(4)
         s.push('dog')
         self.assertTrue(s.peek() == 'dog')
 
     def test_pop(self):
-        '''method to test the Stack pop method'''
+        '''
+        A method to test the Stack pop method
+        '''
         s = Stack()
         s.push(4)
         s.push('dog')
@@ -30,7 +38,9 @@ class TestStack(TestCase):
         self.assertTrue(s.pop() == 4)
 
     def test_size(self):
-        '''method to test the Stack size method'''
+        '''
+        A method to test the Stack size method
+        '''
         s = Stack()
         s.push(4)
         s.push('dog')
