@@ -64,7 +64,22 @@ def infix2postfix(infix_expr):
 
 def compute_operation(operator, operand1, operand2):
 
-    pass
+    '''
+    A function to compute mathematic operation between 2 operands based on match_symbol
+    Arguments:
+    operator - mathematical operators
+    operand1 - first operand
+    operand2 - second operand
+    '''
+
+    if operator == "*":
+        return operand1*operand2
+    if operator == "/":
+        return operand1/operand2
+    if operator == "+":
+        return operand1+operand2
+    if operator == "-":
+        return operand1-operand2
 
 
 def postFixEval(postfix_expr):
