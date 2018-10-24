@@ -82,6 +82,27 @@ def compute_operation(operator, operand1, operand2):
         return operand1-operand2
 
 
-def postFixEval(postfix_expr):
+def postfixEval(postfix_expr):
 
-    pass
+    # a stack to hold the operands
+    stack_of_operands = Stack()
+    # split teh postfix expression into a list of tokens
+    postfixList = postfix_expr.split()
+
+    # iterate through each token in the postfix list
+    for token in postfixList:
+        #if the token is an operand,
+        #convert it from a string to an integer and push the value onto the stack_of_operands
+        if token in "0123456789":
+            stack_of_operands.push(int(token))
+        # If the token is an operator, *, /, +, or -, it will need two operands.
+        # Pop the stack_of_operands twice. The first pop is the second operand and the second pop is the first operand.
+        # Perform the arithmetic operation. Push the result back on the stack_of_operands
+        else:
+            operand2 = stack_of_operands.pop()
+            operand1 = stack_of_operands.pop()
+            evalutation = compute_operation(token, operand1, operand2)
+            stack_of_operands.push(evalutation)
+
+    # return the stack of operands
+    return stack_of_operands.pop()

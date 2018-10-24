@@ -1,5 +1,5 @@
 from unittest import TestCase
-from py_algo.misc import infix2postfix, compute_operation
+from py_algo.misc import infix2postfix, compute_operation, postfixEval
 
 class TestInfixConverter(TestCase):
 
@@ -18,7 +18,7 @@ class TestInfixConverter(TestCase):
     def test_compute_operation(self):
 
         '''
-        Test method to test compute_operation functions
+        Test method to test compute_operation function
         '''
         self.assertTrue(compute_operation('*', 5, 6) == 30)
         self.assertTrue(compute_operation('+', 5, 6) == 11)
@@ -28,3 +28,10 @@ class TestInfixConverter(TestCase):
         self.assertTrue(compute_operation('+', 3, 5) == 8)
         self.assertTrue(compute_operation('-', 3, 5) == -2)
         self.assertTrue(compute_operation('/', 3, 5) == 3/5)
+
+    def test_postfixEval(self):
+
+        '''
+        Test method to test the postfixEval function
+        '''
+        self.assertTrue(postfixEval('7 8 + 3 2 + /') == 3.0 )
