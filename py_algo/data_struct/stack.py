@@ -2,7 +2,7 @@
 class Stack(object):
 
     '''
-    Class implementation of stack
+    Class implementation of Stack data structure
     '''
 
     def __init__(self):
