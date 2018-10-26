@@ -6,7 +6,7 @@ from py_algo.data_struct import Stack
 class TestStack(TestCase):
 
     '''
-    Test class to test the stack module
+    Test class to test the Stack module
     '''
 
     def test_isEmpty(self):
