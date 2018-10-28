@@ -22,25 +22,25 @@ class Deque(object):
         '''
         Class method to add item to the front of the Deque
         '''
-        pass
+        self.items.append(item)
 
     def addRear(self, item):
         '''
         Class method to add item to the rear of the Deque
         '''
-        pass
+        self.items.insert(o,item)
 
     def removeFront(self):
         '''
         Class method to remove item from front of the Deque
         '''
-        pass
+        return self.items.pop()
 
     def removeRear(self):
         '''
         Class method to remove item from the rear of the Deque
         '''
-        pass
+        return self.items.pop(0)
 
     def size(self):
         '''
