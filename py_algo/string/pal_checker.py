@@ -14,7 +14,7 @@ def pal_checker(string):
     deque_of_char = Deque()
     # iterate through each character of the string and store it in the deque
     for char in string:
-        deque_of_char.addRear(ch)
+        deque_of_char.addRear(char)
     # a boolean/indicator variable for pallindrome checking
     equal = True
 
