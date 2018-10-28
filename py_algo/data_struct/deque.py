@@ -28,7 +28,7 @@ class Deque(object):
         '''
         Class method to add item to the rear of the Deque
         '''
-        self.items.insert(o,item)
+        self.items.insert(0,item)
 
     def removeFront(self):
         '''

@@ -19,7 +19,34 @@ class Test(TestCase):
         '''
         A method to test the len method of Deque
         '''
-        pass
+        s = Deque()
+        self.assertTrue(s.size()==0)
+        self.assertTrue(s.isEmpty)
+        s.addRear('bird')
+        self.assertTrue(s.size()==1)
+        self.assertFalse(s.isEmpty)
+        s.addFront('cat')
+        self.assertTrue(s.size()==2)
+        self.assertFalse(s.isEmpty)
+        s.addFront("bear")
+        self.assertTrue(s.size()==3)
+        self.assertFalse(s.isEmpty)
+        s.addRear("snail")
+        self.assertTrue(s.size()==4)
+        self.assertFalse(s.isEmpty)
+        s.removeRear()
+        self.assertTrue(s.size()==3)
+        self.assertFalse(s.isEmpty)
+        s.removeFront()
+        self.assertTrue(s.size()==2)
+        self.assertFalse(s.isEmpty)
+        s.removeRear()
+        self.assertTrue(s.size()==1)
+        self.assertFalse(s.isEmpty)
+        s.removeFront()
+        self.assertTrue(s.size()==0)
+        self.assertTrue(s.isEmpty)
+
 
     def test_insert_methods(self):
         '''
