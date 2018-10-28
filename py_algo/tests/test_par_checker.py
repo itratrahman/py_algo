@@ -1,8 +1,8 @@
 from unittest import TestCase
 
-from py_algo.misc import simple_par_checker
-from py_algo.misc import match_symbol
-from py_algo.misc import par_checker
+from py_algo.string import simple_par_checker
+from py_algo.string import match_symbol
+from py_algo.string import par_checker
 
 class TestParChecker(TestCase):
 

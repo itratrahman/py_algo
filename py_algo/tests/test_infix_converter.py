@@ -1,5 +1,5 @@
 from unittest import TestCase
-from py_algo.misc import infix2postfix, compute_operation, postfixEval
+from py_algo.string import infix2postfix, compute_operation, postfixEval
 
 class TestInfixConverter(TestCase):
 
