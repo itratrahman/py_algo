@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from py_algo.data_struct import Queue
 
-class TestStack(TestCase):
+class TestQueue(TestCase):
 
     '''
     Test class to test the Queue module
