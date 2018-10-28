@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from py_algo.data_struct import Deque
 
-class Test(TestCase):
+class TestDeque(TestCase):
 
     '''
     Test class to test the Deque module
