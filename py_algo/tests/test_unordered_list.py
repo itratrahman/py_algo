@@ -42,3 +42,25 @@ class TestUnorderedList(TestCase):
                 number = random.randint(0,1000)
                 lst.add(number)
             self.assertTrue(lst.size() == length)
+
+    def test_search(self):
+        '''
+        A method to test the search method of unordered list
+        '''
+        random_numbers = []
+        for i in range(10000):
+            random_numbers.append(random.randint(0,1000000))
+
+        lst_items = []
+        for i in range(100):
+            lst_items.append(random.randint(0,1000000))
+
+        lst = UnorderedList()
+
+        for item in lst_items:
+            lst.add(item)
+            self.assertTrue(lst.search(item))
+
+        for item in random_numbers:
+            if item not in lst_items:
+                self.assertFalse(lst.search(item))
