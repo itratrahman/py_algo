@@ -65,24 +65,28 @@ class TestUnorderedList(TestCase):
             if item not in lst_items:
                 self.assertFalse(lst.search(item))
 
-        def test_remove(self):
-            '''
-            A method to test the remove method of unordered list
-            '''
-            lst_items = []
-            for i in range(1000):
-                number = random.randint(0,1000000)
-                while number not in lst_items:
-                    number = random.randint(0,1000000)
-                lst_items.append(number)
+    def test_remove(self):
+        '''
+        A method to test the remove method of unordered list
+        '''
+        lst_items = []
+        for i in range(1000):
+            number = random.randint(0,10000000)
+            while True:
+                if number not in lst_items:
+                    break
+                else:
+                    number = random.randint(0,10000000)
+            lst_items.append(number)
 
-            lst = UnorderedList()
+        lst = UnorderedList()
 
-            for item in lst_items:
-                lst.add(item)
+        for item in lst_items:
+            lst.add(item)
 
+        random.shuffle(lst_items)
 
-            for item in lst_items:
-                self.assertTrue(lst.search(item))
-                lst.remove(item)
-                self.assertFalse(lst.search(item))
+        for item in lst_items:
+            self.assertTrue(lst.search(item))
+            lst.remove(item)
+            self.assertFalse(lst.search(item))
