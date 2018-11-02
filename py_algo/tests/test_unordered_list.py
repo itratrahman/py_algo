@@ -29,3 +29,16 @@ class TestUnorderedList(TestCase):
             number = random.randint(0,1000)
             lst.add(number)
             self.assertTrue(lst.head.getData() == number)
+
+    def test_size(self):
+        '''
+        A method to test the size method of unordered list
+        '''
+        for i in range(100):
+            lst = UnorderedList()
+            counter = 0
+            length = random.randint(0,1000)
+            for j in range(length):
+                number = random.randint(0,1000)
+                lst.add(number)
+            self.assertTrue(lst.size() == length)
