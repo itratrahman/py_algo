@@ -106,3 +106,36 @@ class UnorderedList(object):
                 current_node = current_node.getNext()
         # return the indicator variable
         return found_item
+
+
+    def remove(self,item):
+        '''
+        Method to remove item from list
+        '''
+        # set teh current node to the head
+        current_node = self.head
+        # set previous node to None
+        previous_node = None
+        # boolean/indicator variable to indicate whether the search item is found
+        found_item = False
+        # while the item is not found
+        while not found_item:
+            # if the current node contains the item to be removed
+            # then set found_item to True
+            if current_node.getData() == item:
+                found_item = True
+            # set the previous node to current node
+            # and set current node to next node
+            else:
+                previous_node = current_node
+                current_node = current_node.getNext()
+
+        # if previous node points to none
+        # then point the head the next node
+        # case: when the first item is the item to be removed
+        if previous_node == None:
+            self.head = current_node.getNext()
+        # else set the previous node to the next node of the current Node
+        # so that the current node is out of the list
+        else:
+            previous_node.setNext(current_node.getNext())
