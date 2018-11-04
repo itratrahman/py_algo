@@ -154,6 +154,41 @@ class OrderedList(object):
         """
         return self.head == None
 
+    def add(self, item):
+        """
+        Method to add an item in correct order
+        """
+        # set teh current node to the head
+        current_node = self.head
+        # set previous node to None
+        previous_node = None
+        # boolean/indicator variable to indicate whether
+        # current item is greater than the search item,
+        # this is initialized to False
+        stop = False
+        # iterate until current node points to None and stop condiction is not reached
+        while current_node is not None and not stop:
+            # if the current data is greater them item to be added then stop iterating
+            if current_node.getData()>item:
+                stop = True
+            # else push the current node and previous on node ahead
+            else:
+                previous_node = current_node
+                current_node = current_node.getNext()
+        # initializa a node containing the item
+        temp = Node(item)
+        # if previous node points to none
+        # then point the next reference of the new node
+        # to the old first node of the list
+        if previous_node == None:
+            temp.setNext(self.head)
+            self.head = temp
+        # point the next reference of the new node
+        # to the current node of the list
+        else:
+            temp.setNext(current_node)
+            previous_node.setNext(temp)
+
     def size(self):
         """
         Method to compute the size of the list by traversal
