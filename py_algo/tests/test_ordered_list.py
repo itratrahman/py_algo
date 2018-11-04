@@ -16,6 +16,41 @@ class TestOrderedList(TestCase):
         self.assertTrue(lst.isEmpty)
         self.assertTrue(lst.head is None)
 
+    def test_add(self):
+        """
+        A method to test the add method of unordered list
+        """
+        lst = OrderedList()
+        lst.add(15)
+        self.assertTrue(lst.head.getData()==15)
+        lst.add(17)
+        self.assertFalse(lst.head.getData()==17)
+        self.assertTrue(lst.head.getData()==15)
+        lst.add(12)
+        self.assertTrue(lst.head.getData()==12)
+        self.assertFalse(lst.head.getData()==15)
+        self.assertFalse(lst.head.getData()==17)
+        lst.add(9)
+        self.assertTrue(lst.head.getData()==9)
+        self.assertFalse(lst.head.getData()==12)
+        self.assertFalse(lst.head.getData()==15)
+        self.assertFalse(lst.head.getData()==17)
+        lst.add(13)
+        self.assertTrue(lst.head.getData()==9)
+        self.assertFalse(lst.head.getData()==12)
+        self.assertFalse(lst.head.getData()==13)
+        self.assertFalse(lst.head.getData()==15)
+        self.assertFalse(lst.head.getData()==17)
+        lst.remove(9)
+        lst.remove(12)
+        self.assertFalse(lst.head.getData()==9)
+        self.assertFalse(lst.head.getData()==12)
+        self.assertTrue(lst.head.getData()==13)
+        self.assertFalse(lst.head.getData()==15)
+        self.assertFalse(lst.head.getData()==17)
+
+
+
     def test_size(self):
         """
         A method to test the size method of ordered list
@@ -28,7 +63,6 @@ class TestOrderedList(TestCase):
                 number = random.randint(0,1000)
                 lst.add(number)
             self.assertTrue(lst.size() == length)
-
 
     def test_search(self):
         """
