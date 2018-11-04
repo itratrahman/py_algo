@@ -171,6 +171,36 @@ class OrderedList(object):
         # return the size of the list
         return counter
 
+    def search(self,item):
+        """
+        Method to search an item in the list
+        """
+        # set the current note to the head
+        current_node = self.head
+        # boolean/indicator variable to indicate whether the search item is found
+        found_item = False
+        # boolean/indicator variable to indicate whether
+        # current item is greater than the search item,
+        # this is initialized to False
+        stop_search = False
+        # while we have not reached the end of node and search item is not found
+        while current_node != None and not found_item and not stop_search:
+            # if the current node matches the search item
+            # then set found_item to True
+            if current_node.getData() == item:
+                found_item = True
+            # else check if the current item is greater than search item
+            else:
+                # if he current item is greater than search item
+                # set stop_search to True
+                if current_node.getData()>item:
+                    stop_search = True
+                # else set the current node to the next node of the current node
+                else:
+                    current_node = current_node.getNext()
+        # return the indicator variable
+        return found_item
+
     def remove(self,item):
         """
         Method to remove item from list
