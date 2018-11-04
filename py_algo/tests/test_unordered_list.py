@@ -1,24 +1,25 @@
 from unittest import TestCase
 import random
-
 from py_algo.data_struct import UnorderedList
 
+
 class TestUnorderedList(TestCase):
-    '''
+    """
     Test class for testing unordered list
-    '''
+    """
+
     def test_constructor(self):
-        '''
+        """
         A method to test the constructor of unordered list
-        '''
+        """
         lst = UnorderedList()
         self.assertTrue(lst.isEmpty)
-        self.assertTrue(lst.head == None)
+        self.assertTrue(lst.head is None)
 
     def test_add(self):
-        '''
+        """
         A method to test the add method of unordered list
-        '''
+        """
         lst = UnorderedList()
         for i in range(100000):
             number = random.randint(0,1000)
@@ -31,9 +32,9 @@ class TestUnorderedList(TestCase):
             self.assertTrue(lst.head.getData() == number)
 
     def test_size(self):
-        '''
+        """
         A method to test the size method of unordered list
-        '''
+        """
         for i in range(100):
             lst = UnorderedList()
             counter = 0
@@ -44,9 +45,9 @@ class TestUnorderedList(TestCase):
             self.assertTrue(lst.size() == length)
 
     def test_search(self):
-        '''
+        """
         A method to test the search method of unordered list
-        '''
+        """
         random_numbers = []
         for i in range(10000):
             random_numbers.append(random.randint(0,1000000))
@@ -66,9 +67,9 @@ class TestUnorderedList(TestCase):
                 self.assertFalse(lst.search(item))
 
     def test_remove(self):
-        '''
+        """
         A method to test the remove method of unordered list
-        '''
+        """
         lst_items = []
         for i in range(1000):
             number = random.randint(0,10000000)
