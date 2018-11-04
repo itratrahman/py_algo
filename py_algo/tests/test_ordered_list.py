@@ -10,7 +10,7 @@ class TestOrderedList(TestCase):
 
     def test_constructor(self):
         """
-        A method to test the constructor of unordered list
+        A method to test the constructor of ordered list
         """
         lst = OrderedList()
         self.assertTrue(lst.isEmpty)
@@ -18,7 +18,7 @@ class TestOrderedList(TestCase):
 
     def test_size(self):
         """
-        A method to test the size method of unordered list
+        A method to test the size method of ordered list
         """
         for i in range(100):
             lst = OrderedList()
@@ -29,4 +29,25 @@ class TestOrderedList(TestCase):
                 lst.add(number)
             self.assertTrue(lst.size() == length)
 
-    
+
+    def test_search(self):
+        """
+        A method to test the search method of ordered list
+        """
+        random_numbers = []
+        for i in range(10000):
+            random_numbers.append(random.randint(0,1000000))
+
+        lst_items = []
+        for i in range(100):
+            lst_items.append(random.randint(0,1000000))
+
+        lst = OrderedList()
+
+        for item in lst_items:
+            lst.add(item)
+            self.assertTrue(lst.search(item))
+
+        for item in random_numbers:
+            if item not in lst_items:
+                self.assertFalse(lst.search(item))
