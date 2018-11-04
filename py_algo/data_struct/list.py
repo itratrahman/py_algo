@@ -134,3 +134,39 @@ class UnorderedList(object):
         # so that the current node is out of the list
         else:
             previous_node.setNext(current_node.getNext())
+
+
+class OrderedList(object):
+
+    """
+    Class implementation of ordered list
+    """
+
+    def __init__(self):
+        """
+        Class constructor which initializes the head of the list to None
+        """
+        self.head = None
+
+    def isEmpty(self):
+        """
+        Method to check if the list is empty
+        """
+        return self.head == None
+
+    def size(self):
+        """
+        Method to compute the size of the list by traversal
+        """
+        # set the current note to the head
+        current_node = self.head
+        # intialize the counter variable to 0
+        counter = 0
+        # while the current node does not point to None
+        while current_node != None:
+            # increment the counter variable
+            counter += 1
+            # initalize the current node to the next node of the current node
+            current_node = current_node.getNext()
+        # return the size of the list
+        return counter
