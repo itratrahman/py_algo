@@ -4,31 +4,29 @@ from unittest import TestCase
 from py_algo.data_struct import Stack
 
 class TestStack(TestCase):
-
-    '''
+    """
     Test class to test the Stack module
-    '''
-
+    """
     def test_isEmpty(self):
-        '''
+        """
         A method to test the Stack isEmpty method
-        '''
+        """
         s = Stack()
         self.assertTrue(s.isEmpty())
 
     def test_peek(self):
-        '''
+        """
         A method to test the Stack peek mehtod
-        '''
+        """
         s = Stack()
         s.push(4)
         s.push('dog')
         self.assertTrue(s.peek() == 'dog')
 
     def test_pop(self):
-        '''
+        """
         A method to test the Stack pop method
-        '''
+        """
         s = Stack()
         s.push(4)
         s.push('dog')
@@ -38,9 +36,9 @@ class TestStack(TestCase):
         self.assertTrue(s.pop() == 4)
 
     def test_size(self):
-        '''
+        """
         A method to test the Stack size method
-        '''
+        """
         s = Stack()
         s.push(4)
         s.push('dog')

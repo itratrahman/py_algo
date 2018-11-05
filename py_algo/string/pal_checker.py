@@ -2,14 +2,13 @@
 from ..data_struct import Deque
 
 def pal_checker(string):
-
-    '''
+    """
     A function to check for pallindrome
     Arguments:
     string - string containing the word which used for pallindrome checking
     Returns:
     equal - a boolean/indicator variable which returns True if string is a pallindrome
-    '''
+    """
     # A deque to store the characters of the string
     deque_of_char = Deque()
     # iterate through each character of the string and store it in the deque

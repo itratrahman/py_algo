@@ -2,16 +2,13 @@ from ..data_struct import Stack
 
 
 def simple_par_checker(symbol_string):
-
-    '''
+    """
     a function for checking parenthesis (does not check for type)
-
     Arguments:
     symbol_string - string variable which needs to be check of balanced parenthesis
-
     Returns:
     boolean variable - True if the symbol_string is balanced or else False
-    '''
+    """
     # stack variable to hold the opening parenthesis
     s = Stack()
     # boolean variable to indicate that the parenthesis are balanced

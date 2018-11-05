@@ -7,7 +7,6 @@ class TestOrderedList(TestCase):
     """
     Test class for testing unordered list
     """
-
     def test_constructor(self):
         """
         A method to test the constructor of ordered list
@@ -48,8 +47,6 @@ class TestOrderedList(TestCase):
         self.assertTrue(lst.head.getData()==13)
         self.assertFalse(lst.head.getData()==15)
         self.assertFalse(lst.head.getData()==17)
-
-
 
     def test_size(self):
         """

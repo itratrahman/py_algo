@@ -1,5 +1,4 @@
 
-
 class Node(object):
 
     def __init__(self, init_data):
@@ -50,7 +49,7 @@ class UnorderedList(object):
         """
         Method to check if the list is empty
         """
-        return self.head == None
+        return self.head is None
 
     def add(self, item):
         """
@@ -73,7 +72,7 @@ class UnorderedList(object):
         # intialize the counter variable to 0
         counter = 0
         # while the current node does not point to None
-        while current_node != None:
+        while current_node is not None:
             # increment the counter variable
             counter += 1
             # initalize the current node to the next node of the current node
@@ -82,7 +81,7 @@ class UnorderedList(object):
         return counter
 
 
-    def search(self,item):
+    def search(self ,item):
         """
         Method to search an item in the list
         """
@@ -91,7 +90,7 @@ class UnorderedList(object):
         # boolean/indicator variable to indicate whether the search item is found
         found_item = False
         # while we have not reached the end of node and search item is not found
-        while current_node != None and not found_item:
+        while current_node is not None and not found_item:
             # if the current node matches the search item
             # then set found_item to True
             if current_node.getData() == item:
@@ -103,7 +102,7 @@ class UnorderedList(object):
         return found_item
 
 
-    def remove(self,item):
+    def remove(self ,item):
         """
         Method to remove item from list
         """
@@ -128,7 +127,7 @@ class UnorderedList(object):
         # if previous node points to none
         # then point the head the next node
         # case: when the first item is the item to be removed
-        if previous_node == None:
+        if previous_node is None:
             self.head = current_node.getNext()
         # else set the previous node to the next node of the current Node
         # so that the current node is out of the list
@@ -152,7 +151,7 @@ class OrderedList(object):
         """
         Method to check if the list is empty
         """
-        return self.head == None
+        return self.head is None
 
     def add(self, item):
         """
@@ -166,10 +165,10 @@ class OrderedList(object):
         # current item is greater than the search item,
         # this is initialized to False
         stop = False
-        # iterate until current node points to None and stop condiction is not reached
+        # iterate until current node points to None and stop condition is not reached
         while current_node is not None and not stop:
             # if the current data is greater them item to be added then stop iterating
-            if current_node.getData()>item:
+            if current_node.getData() >item:
                 stop = True
             # else push the current node and previous on node ahead
             else:
@@ -180,7 +179,7 @@ class OrderedList(object):
         # if previous node points to none
         # then point the next reference of the new node
         # to the old first node of the list
-        if previous_node == None:
+        if previous_node is None:
             temp.setNext(self.head)
             self.head = temp
         # point the next reference of the new node
@@ -198,15 +197,15 @@ class OrderedList(object):
         # intialize the counter variable to 0
         counter = 0
         # while the current node does not point to None
-        while current_node != None:
+        while current_node is not None:
             # increment the counter variable
             counter += 1
-            # initalize the current node to the next node of the current node
+            # initialize the current node to the next node of the current node
             current_node = current_node.getNext()
         # return the size of the list
         return counter
 
-    def search(self,item):
+    def search(self ,item):
         """
         Method to search an item in the list
         """
@@ -219,7 +218,7 @@ class OrderedList(object):
         # this is initialized to False
         stop_search = False
         # while we have not reached the end of node and search item is not found
-        while current_node != None and not found_item and not stop_search:
+        while current_node is not None and not found_item and not stop_search:
             # if the current node matches the search item
             # then set found_item to True
             if current_node.getData() == item:
@@ -228,7 +227,7 @@ class OrderedList(object):
             else:
                 # if he current item is greater than search item
                 # set stop_search to True
-                if current_node.getData()>item:
+                if current_node.getData( ) >item:
                     stop_search = True
                 # else set the current node to the next node of the current node
                 else:
@@ -236,7 +235,7 @@ class OrderedList(object):
         # return the indicator variable
         return found_item
 
-    def remove(self,item):
+    def remove(self ,item):
         """
         Method to remove item from list
         """
@@ -261,7 +260,7 @@ class OrderedList(object):
         # if previous node points to none
         # then point the head the next node
         # case: when the first item is the item to be removed
-        if previous_node == None:
+        if previous_node is None:
             self.head = current_node.getNext()
         # else set the previous node to the next node of the current Node
         # so that the current node is out of the list

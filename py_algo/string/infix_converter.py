@@ -1,15 +1,13 @@
 from ..data_struct import Stack
 
 def infix2postfix(infix_expr):
-
-    '''
+    """
     A function to convert infix expression to postfix expression
     Arguments:
     infix_expr - infix expression
     Returns:
     postfix_expr - postfix expression
-    '''
-
+    """
     precedence = {}
     precedence["*"] = 3
     precedence["/"] = 3
@@ -63,15 +61,13 @@ def infix2postfix(infix_expr):
 
 
 def compute_operation(operator, operand1, operand2):
-
-    '''
+    """
     A function to compute mathematic operation between 2 operands based on match_symbol
     Arguments:
     operator - mathematical operators
     operand1 - first operand
     operand2 - second operand
-    '''
-
+    """
     if operator == "*":
         return operand1*operand2
     if operator == "/":
@@ -88,7 +84,6 @@ def postfixEval(postfix_expr):
     stack_of_operands = Stack()
     # split teh postfix expression into a list of tokens
     postfixList = postfix_expr.split()
-
     # iterate through each token in the postfix list
     for token in postfixList:
         #if the token is an operand,

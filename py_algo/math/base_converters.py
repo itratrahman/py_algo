@@ -2,14 +2,14 @@ from ..data_struct import Stack
 
 def divideBy2(number):
 
-    '''
+    """
     A function to convert decimal to binary
 
     Arguments:
     number - a decimal number whose binary is wanted
     Returns:
     binary_string - string containing binary of the number
-    '''
+    """
     # a stack to store the remainders
     stack_of_remainders = Stack()
 
@@ -36,14 +36,13 @@ def divideBy2(number):
 
 def base_converter(number, base):
 
-    '''
+    """
     A function to convert decimal to base between 2 and 16
-
     Arguments:
     number - a decimal number whose base conversion is wanted
     Returns:
     binary_string - string containing base converted representation of the number
-    '''
+    """
     # digits from 0 to E in base 16
     digits = "0123456789ABCDEF"
 

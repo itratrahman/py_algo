@@ -7,7 +7,6 @@ class TestUnorderedList(TestCase):
     """
     Test class for testing unordered list
     """
-
     def test_constructor(self):
         """
         A method to test the constructor of unordered list

@@ -4,16 +4,13 @@ from py_algo.math import divideBy2
 from py_algo.math import base_converter
 
 class TestBaseConverters(TestCase):
-
-    '''
+    """
     Test class for testing base converters
-    '''
-
+    """
     def test_divide_by_2(self):
-
-        '''
+        """
         Test method to test the function of divideBy2
-        '''
+        """
         self.assertTrue(divideBy2(42) == "101010")
         self.assertTrue(divideBy2(300) == "100101100")
         self.assertTrue(divideBy2(255) == "11111111")
@@ -24,10 +21,9 @@ class TestBaseConverters(TestCase):
 
 
     def test_divide_by_2(self):
-
-        '''
+        """
         Test method to test the function of divideBy2
-        '''
+        """
         self.assertTrue(base_converter(42,2) == "101010")
         self.assertTrue(base_converter(300,2) == "100101100")
         self.assertTrue(base_converter(255,2) == "11111111")

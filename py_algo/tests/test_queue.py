@@ -4,23 +4,20 @@ from unittest import TestCase
 from py_algo.data_struct import Queue
 
 class TestQueue(TestCase):
-
-    '''
+    """
     Test class to test the Queue module
-    '''
-
+    """
     def test_isEmpty(self):
-        '''
+        """
         A method to test the Queue isEmpty method
-        '''
+        """
         s = Queue()
         self.assertTrue(s.isEmpty())
 
-
     def test_enqueue_and_dequeue(self):
-        '''
+        """
         A method to test the Queue enqueue method
-        '''
+        """
         s = Queue()
         s.enqueue("Cat")
         s.enqueue("Parrot")
@@ -31,11 +28,10 @@ class TestQueue(TestCase):
         self.assertTrue(s.dequeue() == "Bird")
         self.assertTrue(s.dequeue() == "Apple")
 
-
     def test_len(self):
-        '''
+        """
         A method to test the len method of Queue
-        '''
+        """
         s = Queue()
         s.enqueue("Cat")
         self.assertTrue(s.size() == 1)
