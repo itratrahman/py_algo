@@ -1,5 +1,6 @@
+# import TestCase
 from unittest import TestCase
-
+# import function to be tested
 from py_algo.string import pal_checker
 
 class TestPalChecker(TestCase):

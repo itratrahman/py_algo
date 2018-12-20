@@ -4,7 +4,6 @@ import random
 # import module to be tested
 from py_algo.data_struct import OrderedList
 
-
 class TestOrderedList(TestCase):
     """
     Test class for testing unordered list
@@ -84,7 +83,6 @@ class TestOrderedList(TestCase):
         for item in random_numbers:
             if item not in lst_items:
                 self.assertFalse(lst.search(item))
-
 
     def test_remove(self):
         """
