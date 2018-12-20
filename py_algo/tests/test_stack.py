@@ -1,6 +1,6 @@
-
+# import TestCase
 from unittest import TestCase
-
+# import module to be tested
 from py_algo.data_struct import Stack
 
 class TestStack(TestCase):

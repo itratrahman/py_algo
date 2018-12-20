@@ -1,7 +1,8 @@
+# import TestCase and random package
 from unittest import TestCase
 import random
-from py_algo.data_struct import UnorderedList
-
+# import module to be tested
+from py_algo.data_struct import UnorderedList#
 
 class TestUnorderedList(TestCase):
     """
