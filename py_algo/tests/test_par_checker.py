@@ -1,5 +1,6 @@
+# import TestCase
 from unittest import TestCase
-
+# import functions to be tested
 from py_algo.string import simple_par_checker
 from py_algo.string import match_symbol
 from py_algo.string import par_checker

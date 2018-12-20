@@ -1,7 +1,7 @@
+# import TestCase
 from unittest import TestCase
-
+# import Deque (function that needs to be tested)
 from py_algo.data_struct import Deque
-
 
 class TestDeque(TestCase):
     """
