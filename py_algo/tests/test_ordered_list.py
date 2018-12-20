@@ -1,5 +1,7 @@
+# import TestCase & random package
 from unittest import TestCase
 import random
+# import module to be tested
 from py_algo.data_struct import OrderedList
 
 

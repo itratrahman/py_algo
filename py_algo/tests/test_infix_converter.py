@@ -1,4 +1,6 @@
+# import TestCase
 from unittest import TestCase
+# import functions to be tested
 from py_algo.string import infix2postfix, compute_operation, postfixEval
 
 class TestInfixConverter(TestCase):
