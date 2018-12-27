@@ -3,6 +3,10 @@
 ## Package Description
 This repository has python implementation of all the fundamentals data structures and algorithms. It contains python implementation of fundamentals data structures, search, sort, math, and graph algorithms. The package is self-contained; and unit tested & system tested using nose.
 
+## Folder Description
+- `py_algo` - contains python package which contains python implementation of all the fundamentals data structures and algorithms.
+- `analysis` - contains algorithmic analysis of the algorithms in py_algo in jupyter notebooks. 
+
 ## Installation Procedure
 Download the package. Open the terminal, and change current directory to the directory containing the setup.py file. Install the package using the following command:
 
