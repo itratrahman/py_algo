@@ -1,10 +1,8 @@
 
 class Stack(object):
-
     """
     Class implementation of Stack data structure
     """
-
     def __init__(self):
         """
         class constructor which initialized the stack
@@ -24,9 +22,9 @@ class Stack(object):
         self.items.append(item)
 
     def pop(self):
-        '''
+        """
         a method to pop item from the top of the stack
-        '''
+        """
         return self.items.pop()
 
     def peek(self):
