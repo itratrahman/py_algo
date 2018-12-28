@@ -1,10 +1,8 @@
 
 class Deque(object):
-
     """
     Class implementation of Deque data structure
     """
-
     def __init__(self):
         """
         Class constructor which initializes the Deque
