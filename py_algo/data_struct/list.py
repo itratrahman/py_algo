@@ -1,6 +1,8 @@
 
 class Node(object):
-
+    """
+    Class module which implements data node of a list
+    """
     def __init__(self, init_data):
         """
         Class constructor which initializes the initial data of the node,
@@ -35,7 +37,6 @@ class Node(object):
 
 
 class UnorderedList(object):
-
     """
     Class implementation of unordered list
     """
@@ -136,11 +137,9 @@ class UnorderedList(object):
 
 
 class OrderedList(object):
-
     """
     Class implementation of ordered list
     """
-
     def __init__(self):
         """
         Class constructor which initializes the head of the list to None
