@@ -1,11 +1,9 @@
 
 
 class Queue(object):
-
     """
     Class implementation of Queue data structure
     """
-
     def __init__(self):
         """
         Class constructor initializes the Queue
@@ -13,14 +11,12 @@ class Queue(object):
         self.items = []
 
     def isEmpty(self):
-
         """
         Class method to check whether the Queue is empty
         """
         return self.items == []
 
     def enqueue(self, item):
-
         """
         Class method to add a new item to the rear of the queue
         """
