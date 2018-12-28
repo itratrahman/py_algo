@@ -3,7 +3,6 @@ from ..data_struct import Stack
 def divideBy2(number):
     """
     A function to convert decimal to binary
-
     Arguments:
     number - a decimal number whose binary is wanted
     Returns:
@@ -11,7 +10,6 @@ def divideBy2(number):
     """
     # a stack to store the remainders
     stack_of_remainders = Stack()
-
     # while the decimal is greater than zero
     while number>0:
         # calculate the remainder when divided by 2
@@ -23,7 +21,6 @@ def divideBy2(number):
 
     # string to contain the binary representation of the decimal number
     binary_string = ""
-
     # while the stack of remainders is not empty
     while not stack_of_remainders.isEmpty():
         # pop the remainder from the top of stack and append it to the designated string
@@ -43,7 +40,6 @@ def base_converter(number, base):
     """
     # digits from 0 to E in base 16
     digits = "0123456789ABCDEF"
-
     # a stack to store the remainders
     stack_of_remainders = Stack()
 
@@ -58,7 +54,6 @@ def base_converter(number, base):
 
     # string to contain the binary representation of the decimal number
     binary_string = ""
-
     # while the stack of remainders is not empty
     while not stack_of_remainders.isEmpty():
         # pop the remainder from the top of stack, find the appropriate digit by index,
