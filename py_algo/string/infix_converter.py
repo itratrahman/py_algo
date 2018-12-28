@@ -47,7 +47,6 @@ def infix2postfix(infix_expr):
                   postfixList.append(stack_of_op.pop())
             stack_of_op.push(token)
 
-
     # When the input expression has been completely processed, check the stack_of_op.
     # Any operators still on the stack can be removed and appended to the end of the output list.
     while not stack_of_op.isEmpty():
@@ -58,7 +57,7 @@ def infix2postfix(infix_expr):
 
     # return the postfix expression
     return postfix_expr
-
+    
 
 def compute_operation(operator, operand1, operand2):
     """
@@ -76,7 +75,6 @@ def compute_operation(operator, operand1, operand2):
         return operand1+operand2
     if operator == "-":
         return operand1-operand2
-
 
 def postfixEval(postfix_expr):
 

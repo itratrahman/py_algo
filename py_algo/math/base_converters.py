@@ -1,7 +1,6 @@
 from ..data_struct import Stack
 
 def divideBy2(number):
-
     """
     A function to convert decimal to binary
 
@@ -35,7 +34,6 @@ def divideBy2(number):
 
 
 def base_converter(number, base):
-
     """
     A function to convert decimal to base between 2 and 16
     Arguments:

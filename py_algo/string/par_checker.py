@@ -1,6 +1,5 @@
 from ..data_struct import Stack
 
-
 def simple_par_checker(symbol_string):
     """
     a function for checking parenthesis (does not check for type)
@@ -47,15 +46,13 @@ def simple_par_checker(symbol_string):
 
 
 def match_symbol(open, close):
-
-    '''
+    """
     A funciton for matching parenthesis symbol type
-
     Arguments:
     open & close - corresponding opening and closing symbols from a symbol_string
     Returns:
     boolean variable - True if opening and closing symbols match otherwise False
-    '''
+    """
     opens = "([{"
     closers = ")]}"
     return opens.index(open) == closers.index(close)
