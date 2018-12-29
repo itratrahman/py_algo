@@ -10,16 +10,16 @@ def sum_of_list(list_of_num, method = "iterative"):
     """
     # if the method is iterative
     if method == "iterative":
-        return sum_of_list_iterative(list_of_num)
+        return _sum_of_list_iterative(list_of_num)
     # if the method is recursive
     elif method == "recursive":
-        return sum_of_list_recursive(list_of_num)
+        return _sum_of_list_recursive(list_of_num)
     # else use the iterative method to calculate sum
     else:
-        return sum_of_list_iterative(list_of_num)
+        return _sum_of_list_iterative(list_of_num)
 
 
-def sum_of_list_iterative(list_of_num):
+def _sum_of_list_iterative(list_of_num):
     """
     A function which calculate numerical sum of a list of numbers
     using iterative method
@@ -37,7 +37,7 @@ def sum_of_list_iterative(list_of_num):
     return summation
 
 
-def sum_of_list_recursive(list_of_num):
+def _sum_of_list_recursive(list_of_num):
     """
     A function which calculate numerical sum of a list of numbers
     using recursive method
