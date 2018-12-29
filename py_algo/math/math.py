@@ -44,7 +44,7 @@ def _sum_of_list_recursive(list_of_num):
     Arguments:
     list_of_num - a list containing numbers
     Returns:
-    summation - numerical sum of a list of numbers
+    recursively returns the numerical sum of a list of numbers
     """
     # if the size of list is 1 then return the sole element (recursive base case)
     if len(list_of_num) == 1:
