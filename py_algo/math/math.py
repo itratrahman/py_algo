@@ -51,4 +51,4 @@ def _sum_of_list_recursive(list_of_num):
         return list_of_num[0]
     # else return the sum of first element and the sum of the rest of the element (recursive call)
     else:
-        return list_of_num[0] + sum_of_list_recursive(list_of_num[1:])
+        return list_of_num[0] + _sum_of_list_recursive(list_of_num[1:])
