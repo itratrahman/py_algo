@@ -30,9 +30,28 @@ def divideBy2(number):
     return binary_string
 
 
-def base_converter(number, base):
+def base_converter(number, base, method = "recursive"):
     """
     A function to convert decimal to base between 2 and 16
+    Arguments:
+    number - a decimal number whose base conversion is wanted
+    Returns:
+    binary_string - string containing base converted representation of the number
+    """
+    # if the method is recursive
+    if method == "recursive":
+        return _base_converter_recursive(number, base)
+    # if the method is iterative
+    elif method == "iterative":
+        return _base_converter_iterative(number, base)
+    # else use the recursive method by default
+    else:
+        return _base_converter_recursive(number, base)
+
+
+def _base_converter_iterative(number, base):
+    """
+    A function to iteratively convert decimal to base between 2 and 16
     Arguments:
     number - a decimal number whose base conversion is wanted
     Returns:
@@ -62,3 +81,21 @@ def base_converter(number, base):
 
     # return the base converted representation of the decimal number
     return binary_string
+
+
+def _base_converter_recursive(number, base):
+    """
+    A function to recursively convert decimal to base between 2 and 16
+    Arguments:
+    number - a decimal number whose base conversion is wanted
+    Returns:
+    binary_string - string containing base converted representation of the number
+    """
+    # digits from 0 to E in base 16
+    convertString = "0123456789ABCDEF"
+    # if number is less than this is the base case
+    if number<base:
+        return convertString[number]
+    # else make recursive call
+    else:
+        return base_converter(number//base, base) + convertString[number%base]
