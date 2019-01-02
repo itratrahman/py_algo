@@ -124,7 +124,6 @@ class UnorderedList(object):
             else:
                 previous_node = current_node
                 current_node = current_node.getNext()
-
         # if previous node points to none
         # then point the head the next node
         # case: when the first item is the item to be removed
@@ -255,7 +254,6 @@ class OrderedList(object):
             else:
                 previous_node = current_node
                 current_node = current_node.getNext()
-
         # if previous node points to none
         # then point the head the next node
         # case: when the first item is the item to be removed

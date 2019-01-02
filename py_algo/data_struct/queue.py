@@ -1,5 +1,4 @@
 
-
 class Queue(object):
     """
     Class implementation of Queue data structure

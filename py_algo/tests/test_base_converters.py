@@ -76,4 +76,3 @@ class TestBaseConverters(TestCase):
         self.assertTrue(base_converter(512, 5, method="iterative") == "4022")
         self.assertTrue(base_converter(512, 6, method="iterative") == "2212")
         self.assertTrue(base_converter(512, 16, method="iterative") == "200")
-
