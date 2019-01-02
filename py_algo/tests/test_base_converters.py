@@ -39,6 +39,10 @@ class TestBaseConverters(TestCase):
         self.assertTrue(base_converter(512,6) == "2212")
         self.assertTrue(base_converter(512,16) == "200")
 
+    def test_base_converter_recursive(self):
+        """
+        Test method to test the function of base_converter(recursive)
+        """
         self.assertTrue(base_converter(42, 2, method="recursive") == "101010")
         self.assertTrue(base_converter(300, 2, method="recursive") == "100101100")
         self.assertTrue(base_converter(255, 2, method="recursive") == "11111111")
@@ -54,6 +58,10 @@ class TestBaseConverters(TestCase):
         self.assertTrue(base_converter(512, 6, method="recursive") == "2212")
         self.assertTrue(base_converter(512, 16, method="recursive") == "200")
 
+    def test_base_converter_iterative(self):
+        """
+        Test method to test the function of base_converter(iterative)
+        """
         self.assertTrue(base_converter(42, 2, method="iterative") == "101010")
         self.assertTrue(base_converter(300, 2, method="iterative") == "100101100")
         self.assertTrue(base_converter(255, 2, method="iterative") == "11111111")
@@ -69,17 +77,3 @@ class TestBaseConverters(TestCase):
         self.assertTrue(base_converter(512, 6, method="iterative") == "2212")
         self.assertTrue(base_converter(512, 16, method="iterative") == "200")
 
-        self.assertTrue(base_converter(42, 2) == "101010")
-        self.assertTrue(base_converter(300, 2) == "100101100")
-        self.assertTrue(base_converter(255, 2) == "11111111")
-        self.assertTrue(base_converter(53, 2) == "110101")
-        self.assertTrue(base_converter(1777, 2) == "11011110001")
-        self.assertTrue(base_converter(36, 2) == "100100")
-        self.assertTrue(base_converter(25, 2) == "11001")
-        self.assertTrue(base_converter(25, 16) == "19")
-        self.assertTrue(base_converter(512, 2) == "1000000000")
-        self.assertTrue(base_converter(512, 3) == "200222")
-        self.assertTrue(base_converter(512, 4) == "20000")
-        self.assertTrue(base_converter(512, 5) == "4022")
-        self.assertTrue(base_converter(512, 6) == "2212")
-        self.assertTrue(base_converter(512, 16) == "200")
