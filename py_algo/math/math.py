@@ -53,7 +53,7 @@ def _sum_of_list_recursive(list_of_num):
     else:
         return list_of_num[0] + _sum_of_list_recursive(list_of_num[1:])
 
-def factorial(n, method = "iterative"):
+def factorial(n, method = "recursive"):
     """
     A function to compute factorial
     Arguments:
@@ -61,8 +61,12 @@ def factorial(n, method = "iterative"):
     Returns:
     fact - factorial of n
     """
-    if method == "iterative":
+    if method == "recursive":
         return factorial_iterative(n)
+    elif method == "iterative":
+        return factorial_recursive(n)
+    else:
+        return factorial_recursive(n)
 
 def factorial_iterative(n):
     """
@@ -79,3 +83,18 @@ def factorial_iterative(n):
         fact *=i
     # return factorial
     return fact
+
+def factorial_recursive(n):
+    """
+    A function to compute factorial recursively
+    Arguments:
+    n - number whose factorial we want to calculate
+    Returns:
+    factorial of n
+    """
+    # check for base case
+    if n<1:
+        return 1
+    # else make recursive call
+    else:
+        return n*factorial_recursive(n-1)
