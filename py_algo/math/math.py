@@ -52,3 +52,20 @@ def _sum_of_list_recursive(list_of_num):
     # else return the sum of first element and the sum of the rest of the element (recursive call)
     else:
         return list_of_num[0] + _sum_of_list_recursive(list_of_num[1:])
+
+
+def factorial_iterative(n):
+    """
+    A function to compute factorial_iterative
+    Arguments:
+    n - number whose factorial we want to calculate
+    Returns:
+    fact - factorial of n
+    """
+    # a variable to store the factorial, initialized to 1
+    fact = 1
+    # iterate from 1 to n, and calculate factorial by accumulating products
+    for i in range(1, n+1):
+        fact *=i
+    # return factorial
+    return fact
