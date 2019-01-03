@@ -14,22 +14,22 @@ class TestFactorial(TestCase):
         """
         Test method to test the function of factorial
         """
-        for i in range(150):
-            integer = random.randint(1,15)
+        for i in range(200):
+            integer = random.randint(1,21)
             self.assertTrue(math.factorial(integer), factorial(integer))
 
     def test_factorial_recursive(self):
         """
         Test method to test the function of factorial(recursive)
         """
-        for i in range(150):
-            integer = random.randint(1,15)
+        for i in range(200):
+            integer = random.randint(1,21)
             self.assertTrue(math.factorial(integer), factorial(integer, method = "recursive"))
 
     def test_factorial_iterative(self):
         """
         Test method to test the function of factorial(iterative)
         """
-        for i in range(150):
-            integer = random.randint(1,15)
+        for i in range(200):
+            integer = random.randint(1,21)
             self.assertTrue(math.factorial(integer), factorial(integer, method = "iterative"))
