@@ -1,7 +1,7 @@
-# py_algo
+# py_algo (IN PROGRESS)
 
 ## Package Description
-This repository has python implementation of all the fundamental data structures and algorithms. It contains python implementation of fundamentals data structures, search, sort, math, and graph algorithms. The package is self-contained; and unit tested & system tested using nose.
+This repository has python implementation of all the fundamental data structures and algorithms. One of the next courses I am going to create will be on "Algorithms and Data Structures", and this repo is a sample. It contains python implementation of fundamentals data structures, search, sort, math, and graph algorithms. The package is self-contained; and unit tested & system tested using nose.
 
 ## Folder Description
 - `py_algo` - contains python package which contains python implementation of all the fundamental data structures and algorithms.
