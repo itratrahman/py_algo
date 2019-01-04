@@ -22,12 +22,12 @@ class TestUnorderedList(TestCase):
         """
         lst = UnorderedList()
         for i in range(100000):
-            number = random.randint(0,1000)
+            number = random.randint(0,10000000)
             lst.add(number)
             self.assertTrue(lst.head.getData() == number)
         for i in range(100000):
             lst = UnorderedList()
-            number = random.randint(0,1000)
+            number = random.randint(0,10000000)
             lst.add(number)
             self.assertTrue(lst.head.getData() == number)
 
@@ -35,12 +35,12 @@ class TestUnorderedList(TestCase):
         """
         A method to test the size method of unordered list
         """
-        for i in range(100):
+        for i in range(1000):
             lst = UnorderedList()
             counter = 0
-            length = random.randint(0,1000)
+            length = random.randint(0,500)
             for j in range(length):
-                number = random.randint(0,1000)
+                number = random.randint(0,10000000)
                 lst.add(number)
             self.assertTrue(lst.size() == length)
 
@@ -50,11 +50,11 @@ class TestUnorderedList(TestCase):
         """
         random_numbers = []
         for i in range(10000):
-            random_numbers.append(random.randint(0,1000000))
+            random_numbers.append(random.randint(0,100000000))
 
         lst_items = []
         for i in range(100):
-            lst_items.append(random.randint(0,1000000))
+            lst_items.append(random.randint(0,100000000))
 
         lst = UnorderedList()
 
@@ -72,12 +72,12 @@ class TestUnorderedList(TestCase):
         """
         lst_items = []
         for i in range(1000):
-            number = random.randint(0,10000000)
+            number = random.randint(0,100000000)
             while True:
                 if number not in lst_items:
                     break
                 else:
-                    number = random.randint(0,10000000)
+                    number = random.randint(0,100000000)
             lst_items.append(number)
 
         lst = UnorderedList()
