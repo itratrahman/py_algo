@@ -13,7 +13,7 @@ class TestNode(TestCase):
         A method to test the methods of node class
         """
         for i in range(1000):
-            integer = random.randint(0,1000)
+            integer = random.randint(0,10000000)
             node = Node(integer)
             self.assertTrue(node.getData() == integer)
 
@@ -22,10 +22,10 @@ class TestNode(TestCase):
         A method to test the getData method
         """
         for i in range(1000):
-            integer1 = random.randint(0,1000)
+            integer1 = random.randint(0,100000000)
             node = Node(integer1)
             for i in range(100):
-                integer2 = random.randint(0,1000)
+                integer2 = random.randint(0,100000000)
                 node.setData(integer2)
                 self.assertTrue(node.getData() == integer2)
 
@@ -34,10 +34,10 @@ class TestNode(TestCase):
         A method to test the setNext method
         """
         for i in range(1000):
-            integer1 = random.randint(0,1000)
+            integer1 = random.randint(0,100000000)
             node = Node(integer1)
             self.assertTrue(node.getNext() == None)
             for i in range(100):
-                integer2 = random.randint(0,1000)
+                integer2 = random.randint(0,100000000)
                 node.setNext(integer2)
                 self.assertTrue(node.getNext() == integer2)
