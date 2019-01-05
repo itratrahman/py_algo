@@ -61,6 +61,20 @@ class TestSearch(TestCase):
                 if num not in list_of_items:
                     self.assertFalse(search(list_of_items, num, method = "binary"))
 
+        for i in range(100):
+            list_of_items = []
+            for j in range(100):
+                num = random.randint(0,100000000)
+                if num not in list_of_items:
+                    list_of_items.append(num)
+            list_of_items.sort()
+            for num in list_of_items:
+                self.assertTrue(search(list_of_items, num, method = "binary_iterative"))
+            for k in range(100):
+                num = random.randint(0,100000000)
+                if num not in list_of_items:
+                    self.assertFalse(search(list_of_items, num, method = "binary_iterative"))
+
     def test_binary_search_recursive(self):
         """
         Method to test binary search(recursive)
@@ -78,3 +92,17 @@ class TestSearch(TestCase):
                 num = random.randint(0,100000000)
                 if num not in list_of_items:
                     self.assertFalse(search(list_of_items, num, method = "binary_recursive"))
+
+        for i in range(100):
+            list_of_items = []
+            for j in range(100):
+                num = random.randint(0,100000000)
+                if num not in list_of_items:
+                    list_of_items.append(num)
+            list_of_items.sort()
+            for num in list_of_items:
+                self.assertTrue(search(list_of_items, num))
+            for k in range(100):
+                num = random.randint(0,100000000)
+                if num not in list_of_items:
+                    self.assertFalse(search(list_of_items, num))
