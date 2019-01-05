@@ -8,10 +8,8 @@ def search(list_of_items, search_item, method = "sequential"):
     Returns:
     item_found - boolean variable to indicate whether the search item is found
     """
-    if method = "sequential":
+    if method == "sequential":
         return  _sequential_search(list_of_items, search_item)
-
-
 
 def _sequential_search(list_of_items, search_item):
     """
