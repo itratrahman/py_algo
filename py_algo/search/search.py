@@ -8,14 +8,19 @@ def search(list_of_items, search_item, method = "sequential"):
     Returns:
     item_found - boolean variable to indicate whether the search item is found
     """
+    # if method is sequential
     if method == "sequential":
         return  _sequential_search(list_of_items, search_item)
+    # if the method is binary search
     elif method == "binary":
         return  _binary_search_iterative(list_of_items, search_item)
+    # if the method is binary search iterative
     elif method == "binary_iterative":
         return  _binary_search_iterative(list_of_items, search_item)
+    # if the method is binary search recursive
     elif method == "binary_recursive":
         return _binary_search_recursive(list_of_items, search_item)
+    # else use binary search recursive
     else:
         return _binary_search_recursive(list_of_items, search_item)
 
