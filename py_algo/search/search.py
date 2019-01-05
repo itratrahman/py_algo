@@ -59,7 +59,6 @@ def _binary_search_iterative(list_of_items, search_item):
     # boolean variable to indicate whether the search item is found
     # indicator variable is initialize to false
     item_found = False
-
     # while the item is not found and we have not run out of list
     while not item_found and first_index<=last_index:
         # calculate index of the midpoint
@@ -76,7 +75,6 @@ def _binary_search_iterative(list_of_items, search_item):
             # else update the first index to one above midpoint index
             else:
                 first_index = midpoint_index + 1
-
     # return the indicator variable
     return item_found
 
@@ -99,8 +97,13 @@ def _binary_search_recursive(list_of_items, search_item):
         # if the item is found the return True
         if list_of_items[midpoint_index]==search_item:
             return True
+        # else make recursive calls
         else:
+            # if the search item is in the lower half
+            # then make recursive call to the lower half of the list
             if search_item<list_of_items[midpoint_index]:
                 return _binary_search_recursive(list_of_items[:midpoint_index], search_item)
+            # if the search item is in the upper half
+            # then make recursive call to the upper half of the list
             else:
                 return _binary_search_recursive(list_of_items[midpoint_index+1:], search_item)
