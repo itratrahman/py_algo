@@ -9,6 +9,24 @@ class TestSearch(TestCase):
     """
     Test class for search methods
     """
+    def test_import(self):
+        """
+        Test imports of different type of search methods
+        """
+        try:
+            from py_algo.search import _sequential_search
+        except:
+            raise Exception("Could not import sequential_search")
+        try:
+            from py_algo.search import _binary_search_iterative
+        except:
+            raise Exception("Could not import binary_search_iterative")
+        try:
+            from py_algo.search import _binary_search_iterative
+        except:
+            raise Exception("Could not import binary_search_iterative")
+
+
     def test_sequential_search(self):
         """
         Method to test sequential search
@@ -28,7 +46,7 @@ class TestSearch(TestCase):
 
     def test_sequential_search(self):
         """
-        Method to test sequential search
+        Method to test binary search
         """
         for i in range(1000):
             list_of_items = []
