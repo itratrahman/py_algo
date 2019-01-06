@@ -4,9 +4,10 @@ from unittest import TestCase
 from py_algo.math import divideBy2
 from py_algo.math import base_converter
 
-class TestBaseConverters(TestCase):
+
+class TestDivideBY2(TestCase):
     """
-    Test class for testing base converters
+    Test class for testing divideBy2 method
     """
     def test_divide_by_2(self):
         """
@@ -20,9 +21,14 @@ class TestBaseConverters(TestCase):
         self.assertTrue(divideBy2(36) == "100100")
         self.assertTrue(divideBy2(1000) == "1111101000")
 
+
+class TestBaseConverters(TestCase):
+    """
+    Test class for testing base converters
+    """
     def test_base_converter(self):
         """
-        Test method to test the function of base_converter
+        Test method to test the grand method of base_converter
         """
         self.assertTrue(base_converter(42,2) == "101010")
         self.assertTrue(base_converter(300,2) == "100101100")
