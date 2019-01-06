@@ -5,9 +5,9 @@ import random
 # import search from py_algo
 from py_algo.search import search
 
-class TestSearch(TestCase):
+class TestSequetialSearch(TestCase):
     """
-    Test class for search methods
+    Test class for sequential search methods
     """
     def test_import(self):
         """
@@ -17,14 +17,6 @@ class TestSearch(TestCase):
             from py_algo.search import _sequential_search
         except:
             raise Exception("Could not import _sequential_search")
-        try:
-            from py_algo.search import _binary_search_iterative
-        except:
-            raise Exception("Could not import _binary_search_iterative")
-        try:
-            from py_algo.search import _binary_search_recursive
-        except:
-            raise Exception("Could not import _binary_search_recursive")
 
     def test_sequential_search(self):
         """
@@ -42,6 +34,24 @@ class TestSearch(TestCase):
                 num = random.randint(0,100000000)
                 if num not in list_of_items:
                     self.assertFalse(search(list_of_items, num, method = "sequential"))
+
+
+class TestBinarySearch(TestCase):
+    """
+    Test class for binary search methods
+    """
+    def test_import(self):
+        """
+        Test imports of different type of search methods
+        """
+        try:
+            from py_algo.search import _binary_search_iterative
+        except:
+            raise Exception("Could not import _binary_search_iterative")
+        try:
+            from py_algo.search import _binary_search_recursive
+        except:
+            raise Exception("Could not import _binary_search_recursive")
 
     def test_binary_search_iterative(self):
         """
