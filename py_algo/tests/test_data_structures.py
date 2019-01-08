@@ -300,7 +300,6 @@ class TestUnorderedList(TestCase):
             lst.remove(item)
             self.assertFalse(lst.search(item))
 
-
     class TestOrderedList(TestCase):
         """
         Test class for testing unordered list
