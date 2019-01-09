@@ -4,8 +4,11 @@ from unittest import TestCase
 from py_algo.math import divideBy2
 from py_algo.math import base_converter
 from py_algo.math import sum_of_list
+from py_algo.math import factorial
 # import random package
 import random
+# import math and random package
+import math
 
 
 class TestDivideBY2(TestCase):
@@ -101,3 +104,32 @@ class TestSumOfList(TestCase):
                 random_list.append(random.randint(0,1000000))
             self.assertTrue(sum(random_list) == sum_of_list(random_list))
             self.assertTrue(sum(random_list) == sum_of_list(random_list, method = "recursive"))
+
+
+class TestFactorial(TestCase):
+    """
+    Test class for testing factorial
+    """
+    def test_factorial(self):
+        """
+        Test method to test the function of factorial
+        """
+        for i in range(200):
+            integer = random.randint(1,21)
+            self.assertTrue(math.factorial(integer), factorial(integer))
+
+    def test_factorial_recursive(self):
+        """
+        Test method to test the function of factorial(recursive)
+        """
+        for i in range(200):
+            integer = random.randint(1,21)
+            self.assertTrue(math.factorial(integer), factorial(integer, method = "recursive"))
+
+    def test_factorial_iterative(self):
+        """
+        Test method to test the function of factorial(iterative)
+        """
+        for i in range(200):
+            integer = random.randint(1,21)
+            self.assertTrue(math.factorial(integer), factorial(integer, method = "iterative"))
