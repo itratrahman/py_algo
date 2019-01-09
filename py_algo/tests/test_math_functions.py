@@ -3,7 +3,9 @@ from unittest import TestCase
 # import functions to be tested
 from py_algo.math import divideBy2
 from py_algo.math import base_converter
-
+from py_algo.math import sum_of_list
+# import random package
+import random
 
 
 class TestDivideBY2(TestCase):
@@ -83,3 +85,19 @@ class TestBaseConverters(TestCase):
         self.assertTrue(base_converter(512, 5, method="iterative") == "4022")
         self.assertTrue(base_converter(512, 6, method="iterative") == "2212")
         self.assertTrue(base_converter(512, 16, method="iterative") == "200")
+
+
+class TestSumOfList(TestCase):
+    """
+    Test class for testing sum_of_list
+    """
+    def test_sum_of_list(self):
+        """
+        Test method to test the method of sum_of_list
+        """
+        for i in range(500):
+            random_list = []
+            for j in range(50):
+                random_list.append(random.randint(0,1000000))
+            self.assertTrue(sum(random_list) == sum_of_list(random_list))
+            self.assertTrue(sum(random_list) == sum_of_list(random_list, method = "recursive"))
