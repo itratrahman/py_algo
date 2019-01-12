@@ -62,13 +62,13 @@ def factorial(n, method = "recursive"):
     fact - factorial of n
     """
     if method == "recursive":
-        return factorial_iterative(n)
+        return _factorial_iterative(n)
     elif method == "iterative":
-        return factorial_recursive(n)
+        return _factorial_recursive(n)
     else:
-        return factorial_recursive(n)
+        return _factorial_recursive(n)
 
-def factorial_iterative(n):
+def _factorial_iterative(n):
     """
     A function to compute factorial iteratively
     Arguments:
@@ -84,7 +84,7 @@ def factorial_iterative(n):
     # return factorial
     return fact
 
-def factorial_recursive(n):
+def _factorial_recursive(n):
     """
     A function to compute factorial recursively
     Arguments:
@@ -97,4 +97,4 @@ def factorial_recursive(n):
         return 1
     # else make recursive call
     else:
-        return n*factorial_recursive(n-1)
+        return n*_factorial_recursive(n-1)
