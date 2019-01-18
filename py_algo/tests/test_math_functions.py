@@ -5,6 +5,7 @@ from py_algo.math import divideBy2
 from py_algo.math import base_converter
 from py_algo.math import sum_of_list
 from py_algo.math import factorial
+from py_algo.math import power
 # import random package
 import random
 # import math and random package
@@ -108,7 +109,7 @@ class TestSumOfList(TestCase):
 
 class TestFactorial(TestCase):
     """
-    Test class for testing factorial
+    Test class for testing factorial function
     """
     def test_factorial(self):
         """
@@ -133,3 +134,17 @@ class TestFactorial(TestCase):
         for i in range(200):
             integer = random.randint(1,21)
             self.assertTrue(math.factorial(integer), factorial(integer, method = "iterative"))
+
+
+class TestPower(TestCase):
+    """
+    Test class for testing power function
+    """
+    def test_power(self):
+        """
+        Test method to test the function of power
+        """
+        for i in range(2000):
+            num = random.randint(0,15)
+            integer = random.randint(1,10)
+            self.assertTrue(power(num,integer)==math.pow(num,integer))
