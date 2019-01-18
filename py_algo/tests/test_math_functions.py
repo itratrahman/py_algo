@@ -148,3 +148,12 @@ class TestPower(TestCase):
             num = random.randint(0,15)
             integer = random.randint(1,10)
             self.assertTrue(power(num,integer)==math.pow(num,integer))
+
+    def test_power_iterative(self):
+        """
+        Test method to test the function of power (iterative)
+        """
+        for i in range(2000):
+            num = random.randint(0,15)
+            integer = random.randint(1,10)
+            self.assertTrue(power(num,integer, method='iterative')==math.pow(num,integer))
