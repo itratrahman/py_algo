@@ -98,3 +98,35 @@ def _factorial_recursive(n):
     # else make recursive call
     else:
         return n*_factorial_recursive(n-1)
+
+
+def power(num, pow):
+    """
+    A function which computes power of a number
+    Arguments:
+    num - number whose power is calculated
+    pow - number by which the power is raised
+    Returns:
+    power or exponent of a number
+    """
+    # if the method is iterative
+    if method == "iterative":
+        return _power_iterative(num, pow)
+
+
+def _power_iterative(num, pow):
+    """
+    A function which computes power of a number iteratively
+    Arguments:
+    num - number whose power is calculated
+    pow - number by which the power is raised
+    Returns:
+    exponent - power or exponent of a number
+    """
+    # a variable to accumulate exponent
+    exponent = 1
+    # accumulate the exponent by iteratively multiplying
+    for i in range(pow):
+        exponent *= num
+    # return the exponent
+    return exponent
