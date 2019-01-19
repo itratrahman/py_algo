@@ -142,7 +142,7 @@ class TestPower(TestCase):
     """
     def test_power(self):
         """
-        Test method to test the function of power
+        Test method to test the grand function of power
         """
         for i in range(2000):
             num = random.randint(0,15)
@@ -151,7 +151,7 @@ class TestPower(TestCase):
 
     def test_power_iterative(self):
         """
-        Test method to test the function of power (iterative)
+        Test method to test the iterative function of power
         """
         for i in range(2000):
             num = random.randint(0,15)
@@ -160,7 +160,7 @@ class TestPower(TestCase):
 
     def test_power_iterative(self):
         """
-        Test method to test the function of power (iterative)
+        Test method to test the recursive function of power
         """
         for i in range(2000):
             num = random.randint(0,15)
