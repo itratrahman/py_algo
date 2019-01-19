@@ -145,7 +145,10 @@ def _power_recursive(num, pow):
     Returns:
     exponent - power or exponent of a number
     """
+    # power is zero then it is the base case
+    # so return 1
     if pow == 0:
         return 1
+    # else make recursive call
     else:
         return num*_power_recursive(num,pow-1)
