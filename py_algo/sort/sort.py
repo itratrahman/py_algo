@@ -73,21 +73,30 @@ def _split_and_merge(list_of_items, verbose = False):
         # extract left and right half of the array
         left_half = list_of_items[:midpoint]
         right_half = list_of_items[midpoint:]
-        # recursive call on left and righ half of the array
+        # recursive call on left and righ halves of the array
         _split_and_merge(left_half)
         _split_and_merge(right_half)
 
         ###########Merge Operation###########
         # indexes for merging
         i,j,k = 0,0,0
-        # merge of by comparing the left & right half of the merged list
+        # merge by comparing the left & right half of the merged list
         while i<len(left_half) and j<len(right_half):
+            # if the ith elem of left half
+            # is less than jth elem of right half
+            # initialize the kth elem of list to ith elem of left half
+            # increment the i by 1
             if left_half[i]<right_half[j]:
                 list_of_items[k] = left_half[i]
                 i += 1
+            # if the ith elem of left half
+            # is greater than jth elem of right half
+            # initialize the kth elem of list to ith elem of left half
+            # increment the j by 1
             else:
                 list_of_items[k] = right_half[j]
                 j += 1
+            # increment k by 1
             k += 1
         # assign the left overs of left half of the merged list to the the original list
         while i < len(left_half):
@@ -162,9 +171,9 @@ def partition(list_of_items,first_elem,last_elem):
             temp = list_of_items[left_mark]
             list_of_items[left_mark] = list_of_items[right_mark]
             list_of_items[right_mark] = temp
-    # swap first element right mark
+    # swap first element and right mark
     temp = list_of_items[first_elem]
     list_of_items[first_elem] = list_of_items[right_mark]
     list_of_items[right_mark] = temp
-    # return the right mark which is the partition
+    # return the right mark which is the splitpoint
     return right_mark
