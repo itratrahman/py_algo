@@ -139,29 +139,32 @@ def partition(list_of_items,first_elem,last_elem):
     """
     A function to partition for quick sort
     """
+    # calculate pivot, left mark and right mark
     pivot = list_of_items[first_elem]
-
     left_mark = first_elem+1
     right_mark = last_elem
 
+    # a boolean variable to indicate whether a partition is found
     partition_found = False
+    # iterate until parition is not found
     while not partition_found:
-
+        # increment left mark until we locate a value that is greater than the pivot
         while left_mark <= right_mark and list_of_items[left_mark] <= pivot:
             left_mark = left_mark + 1
-
+        # decrement right mark until we find a value that is less than the pivot
         while list_of_items[right_mark] >= pivot and right_mark >= left_mark:
             right_mark = right_mark -1
-
+        # if the right mark is less left mark then partition is found
         if right_mark < left_mark:
             partition_found = True
+        # else swap left and right marks
         else:
             temp = list_of_items[left_mark]
             list_of_items[left_mark] = list_of_items[right_mark]
             list_of_items[right_mark] = temp
-
+    # swap first element right mark
     temp = list_of_items[first_elem]
     list_of_items[first_elem] = list_of_items[right_mark]
     list_of_items[right_mark] = temp
-
+    # return the right mark which is the partition
     return right_mark
