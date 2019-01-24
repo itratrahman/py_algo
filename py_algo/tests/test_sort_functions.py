@@ -9,6 +9,24 @@ class TestSearchMethods(TestCase):
     """
     Test class for testing search methods
     """
+    def test_imports(self):
+        """
+        A method for testing imports
+        """
+        try:
+            from py_algo.sort import sort_list
+        except:
+            raise Exception("Could not import sort_list")
+        try:
+            from py_algo.sort import _merge_sort
+        except:
+            raise Exception("Could not import _merge_sort")
+        try:
+            from py_algo.sort import _bubble_sort
+        except:
+            raise Exception("Could not import _bubble_sort")
+
+
     def test_grand_search_method(self):
         """
         A method for testing the grand search method
@@ -22,7 +40,7 @@ class TestSearchMethods(TestCase):
 
     def test_bubble_sort_method(self):
         """
-        A method for testing the grand search method
+        A method for testing the bubble search method
         """
         for i in range(100):
             num_of_elem = random.randint(5,100)
@@ -33,7 +51,7 @@ class TestSearchMethods(TestCase):
 
     def test_merge_sort_method(self):
         """
-        A method for testing the grand search method
+        A method for testing the merge search method
         """
         for i in range(100):
             num_of_elem = random.randint(5,100)
