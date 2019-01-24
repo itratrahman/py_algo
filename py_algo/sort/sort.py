@@ -10,6 +10,9 @@ def sort_list(list_of_items, method = "bubble"):
     """
     if method == "bubble":
         return _bubble_sort(list_of_items)
+    elif method == "merge":
+        _merge_sort(list_of_items)
+        return list_of_items
 
 
 def _bubble_sort(list_of_items):
@@ -31,3 +34,55 @@ def _bubble_sort(list_of_items):
                 list_of_items[i+1] = temp
     # return sorted list
     return list_of_items
+
+
+def _merge_sort(list_of_items, verbose = False):
+    """
+    A function which implements merge sort
+    Arguments:
+    list_of_items - list of items to be sorted
+    Returns:
+    list_of_items - sorted list
+    """
+    if verbose:
+        print("Splitting:",list_of_items)
+
+    # if the length of list is greater than one
+    # them proceed splitting recursively and merging
+    if len(list_of_items)>1:
+
+        ###########Split Operation###########
+        # calculate the midpoint
+        midpoint = len(list_of_items)//2
+        # extract left and right half of the array
+        left_half = list_of_items[:midpoint]
+        right_half = list_of_items[midpoint:]
+        # recursive call on left and righ half of the array
+        _merge_sort(left_half)
+        _merge_sort(right_half)
+
+        ###########Merge Operation###########
+        # indexes for merging
+        i,j,k = 0,0,0
+        # merge of by comparing the left & right half of the merged list
+        while i<len(left_half) and j<len(right_half):
+            if left_half[i]<right_half[j]:
+                list_of_items[k] = left_half[i]
+                i += 1
+            else:
+                list_of_items[k] = right_half[j]
+                j += 1
+            k += 1
+        # assign the left overs of left half of the merged list to the the original list
+        while i < len(left_half):
+            list_of_items[k] = left_half[i]
+            i += 1
+            k += 1
+        # assign the left overs of right half of the merged list to the the original list
+        while j < len(right_half):
+            list_of_items[k] = right_half[j]
+            j += 1
+            k += 1
+
+    if verbose:
+        print("Merging:", list_of_items)
