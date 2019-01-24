@@ -1,5 +1,5 @@
 
-def sort_list(list_of_items, method = "bubble"):
+def sort_list(list_of_items, method = "merge"):
     """
     A function which sorts a list of numberic values
     Arguments:
@@ -11,6 +11,9 @@ def sort_list(list_of_items, method = "bubble"):
     if method == "bubble":
         return _bubble_sort(list_of_items)
     elif method == "merge":
+        _merge_sort(list_of_items)
+        return list_of_items
+    else:
         _merge_sort(list_of_items)
         return list_of_items
 
