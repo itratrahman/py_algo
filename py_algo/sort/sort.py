@@ -104,7 +104,7 @@ def _split_and_merge(list_of_items, verbose = False):
         print("Merging:", list_of_items)
 
 
-def _quick_sort(alist):
+def _quick_sort(list_of_items):
     """
     A function which invokes _split_and_partition function
     which invokes quick sort operation
@@ -114,12 +114,12 @@ def _quick_sort(alist):
     list_of_items - sorted list
     """
     # invoke recursive function to recursively split and partition
-    _split_and_partition(alist,0,len(alist)-1)
+    _split_and_partition(list_of_items,0,len(list_of_items)-1)
     # return the sorted list
-    return alist
+    return list_of_items
 
 
-def _split_and_partition(alist,first,last):
+def _split_and_partition(list_of_items,first_elem,last_elem):
     """
     A function which implements recursively split and partition
     to implement quick sort
@@ -128,40 +128,40 @@ def _split_and_partition(alist,first,last):
     """
     # if first element is less than last element
     # then recursively split and partion to sort
-    if first<last:
-        splitpoint = partition(alist,first,last)
+    if first_elem<last_elem:
+        splitpoint = partition(list_of_items,first_elem,last_elem)
         # recursive call on left and right of partition
-        _split_and_partition(alist,first,splitpoint-1)
-        _split_and_partition(alist,splitpoint+1,last)
+        _split_and_partition(list_of_items,first_elem,splitpoint-1)
+        _split_and_partition(list_of_items,splitpoint+1,last_elem)
 
 
-def partition(alist,first,last):
+def partition(list_of_items,first_elem,last_elem):
     """
     A function to partition for quick sort
     """
-    pivotvalue = alist[first]
+    pivot = list_of_items[first_elem]
 
-    leftmark = first+1
-    rightmark = last
+    left_mark = first_elem+1
+    right_mark = last_elem
 
-    done = False
-    while not done:
+    partition_found = False
+    while not partition_found:
 
-        while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
-            leftmark = leftmark + 1
+        while left_mark <= right_mark and list_of_items[left_mark] <= pivot:
+            left_mark = left_mark + 1
 
-        while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
-            rightmark = rightmark -1
+        while list_of_items[right_mark] >= pivot and right_mark >= left_mark:
+            right_mark = right_mark -1
 
-        if rightmark < leftmark:
-            done = True
+        if right_mark < left_mark:
+            partition_found = True
         else:
-            temp = alist[leftmark]
-            alist[leftmark] = alist[rightmark]
-            alist[rightmark] = temp
+            temp = list_of_items[left_mark]
+            list_of_items[left_mark] = list_of_items[right_mark]
+            list_of_items[right_mark] = temp
 
-    temp = alist[first]
-    alist[first] = alist[rightmark]
-    alist[rightmark] = temp
+    temp = list_of_items[first_elem]
+    list_of_items[first_elem] = list_of_items[right_mark]
+    list_of_items[right_mark] = temp
 
-    return rightmark
+    return right_mark
