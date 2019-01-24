@@ -13,6 +13,8 @@ def sort_list(list_of_items, method = "merge"):
     elif method == "merge":
         _merge_sort(list_of_items)
         return list_of_items
+    elif method == "quick":
+        return _quick_sort(list_of_items)
     else:
         _merge_sort(list_of_items)
         return list_of_items
@@ -100,3 +102,66 @@ def _split_and_merge(list_of_items, verbose = False):
 
     if verbose:
         print("Merging:", list_of_items)
+
+
+def _quick_sort(alist):
+    """
+    A function which invokes _split_and_partition function
+    which invokes quick sort operation
+    Arguments:
+    list_of_items - list of items to be sorted
+    Returns:
+    list_of_items - sorted list
+    """
+    # invoke recursive function to recursively split and partition
+    _split_and_partition(alist,0,len(alist)-1)
+    # return the sorted list
+    return alist
+
+
+def _split_and_partition(alist,first,last):
+    """
+    A function which implements recursively split and partition
+    to implement quick sort
+    Arguments:
+    list_of_items - list of items to be sorted
+    """
+    # if first element is less than last element
+    # then recursively split and partion to sort
+    if first<last:
+        splitpoint = partition(alist,first,last)
+        # recursive call on left and right of partition
+        _split_and_partition(alist,first,splitpoint-1)
+        _split_and_partition(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+    """
+    A function to partition for quick sort
+    """
+    pivotvalue = alist[first]
+
+    leftmark = first+1
+    rightmark = last
+
+    done = False
+    while not done:
+
+        while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+            leftmark = leftmark + 1
+
+        while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+            rightmark = rightmark -1
+
+        if rightmark < leftmark:
+            done = True
+        else:
+            temp = alist[leftmark]
+            alist[leftmark] = alist[rightmark]
+            alist[rightmark] = temp
+
+    temp = alist[first]
+    alist[first] = alist[rightmark]
+    alist[rightmark] = temp
+
+    return rightmark

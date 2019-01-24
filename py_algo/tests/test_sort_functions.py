@@ -59,3 +59,14 @@ class TestSearchMethods(TestCase):
             for j in range(num_of_elem):
                 list_of_items.append(random.randint(0,1000))
             self.assertTrue(sort_list(list_of_items, method = "merge") == sorted(list_of_items))
+
+    def test_quick_sort_method(self):
+        """
+        A method for testing the quick search method
+        """
+        for i in range(100):
+            num_of_elem = random.randint(5,100)
+            list_of_items = []
+            for j in range(num_of_elem):
+                list_of_items.append(random.randint(0,1000))
+            self.assertTrue(sort_list(list_of_items, method = "quick") == sorted(list_of_items))
