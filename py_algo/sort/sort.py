@@ -41,11 +41,22 @@ def _bubble_sort(list_of_items):
 
 def _merge_sort(list_of_items, verbose = False):
     """
-    A function which implements merge sort
+    A function which invokes _split_and_merge function
+    which invokes merge sort operation
     Arguments:
     list_of_items - list of items to be sorted
     Returns:
     list_of_items - sorted list
+    """
+    _split_and_merge(list_of_items, verbose)
+    return list_of_items
+
+
+def _split_and_merge(list_of_items, verbose = False):
+    """
+    A function which implements merge sort
+    Arguments:
+    list_of_items - list of items to be sorted
     """
     if verbose:
         print("Splitting:",list_of_items)
@@ -61,8 +72,8 @@ def _merge_sort(list_of_items, verbose = False):
         left_half = list_of_items[:midpoint]
         right_half = list_of_items[midpoint:]
         # recursive call on left and righ half of the array
-        _merge_sort(left_half)
-        _merge_sort(right_half)
+        _split_and_merge(left_half)
+        _split_and_merge(right_half)
 
         ###########Merge Operation###########
         # indexes for merging
