@@ -11,6 +11,7 @@ def sort_list(list_of_items, method = "bubble"):
     if method == "bubble":
         return _bubble_sort(list_of_items)
 
+
 def _bubble_sort(list_of_items):
     """
     A function which implements bubble sort
@@ -19,9 +20,11 @@ def _bubble_sort(list_of_items):
     Returns:
     list_of_items - sorted list
     """
-
-    for pass in range(len(list_of_items)-1, 0, -1):
-        for i range range(pass):
+    # iterate through decreasing number of passes
+    for num_of_pass in range(len(list_of_items)-1, 0,-1):
+        # iterate number of pass times
+        for i in range(num_of_pass):
+            # if ith element is greater than (i+1)th element then make a swap
             if list_of_items[i]>list_of_items[i+1]:
                 temp = list_of_items[i]
                 list_of_items[i] = list_of_items[i+1]
