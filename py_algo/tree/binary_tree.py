@@ -73,3 +73,16 @@ class binary_tree(object):
         A Method to get the root node of the subtree
         """
         return self.key
+
+    def preorder(self):
+        """
+        A function which performs preorder traversal of binary tree
+        """
+        # print root node
+        print(self.key)
+        # recursively traverse left child if it is a left child
+        if self.left_child:
+            self.left_child.preorder()
+        # recursively traverse right child if it is a right child
+        if self.right_child:
+            self.right_child.preorder()
