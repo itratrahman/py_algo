@@ -73,17 +73,3 @@ class binary_tree(object):
         A Method to get the root node of the subtree
         """
         return self.key
-
-if __name__ == "__main__":
-
-    r = binary_tree('a')
-    print(r.get_root_node())
-    print(r.get_left_child())
-    r.insert_left('b')
-    print(r.get_left_child())
-    print(r.get_left_child().get_root_node())
-    r.insert_right('c')
-    print(r.get_right_child())
-    print(r.get_right_child().get_root_node())
-    r.get_right_child().set_root_node('hello')
-    print(r.get_right_child().get_root_node())
