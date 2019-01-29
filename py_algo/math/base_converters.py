@@ -26,7 +26,7 @@ def divideBy2(number):
         # pop the remainder from the top of stack and append it to the designated string
         binary_string = binary_string + str(stack_of_remainders.pop())
 
-    # return the binary representation of the decimal number
+    # return the binary representation of the number
     return binary_string
 
 
@@ -64,11 +64,11 @@ def _base_converter_iterative(number, base):
 
     # while the decimal is greater than zero
     while number>0:
-        # calculate the remainder when divided by 2
+        # calculate the remainder when divided by the base
         remainder = number % base
         # push the remainder to the top of the designated stack
         stack_of_remainders.push(remainder)
-        # divide the number by 2 and reinitialize
+        # divide the number by the base and reinitialize
         number = number//base
 
     # string to contain the binary representation of the decimal number
@@ -79,7 +79,7 @@ def _base_converter_iterative(number, base):
         # and append it to the designated string
         binary_string = binary_string + digits[stack_of_remainders.pop()]
 
-    # return the base converted representation of the decimal number
+    # return the base converted representation of the number
     return binary_string
 
 
