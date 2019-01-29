@@ -98,4 +98,4 @@ def _base_converter_recursive(number, base):
         return convertString[number]
     # else make recursive call
     else:
-        return base_converter(number//base, base) + convertString[number%base]
+        return _base_converter_recursive(number//base, base) + convertString[number%base]
