@@ -90,7 +90,7 @@ class UnorderedList(object):
         current_node = self.head
         # boolean/indicator variable to indicate whether the search item is found
         found_item = False
-        # while we have not reached the end of node and search item is not found
+        # while we have not reached the first node and search item is not found
         while current_node is not None and not found_item:
             # if the current node matches the search item
             # then set found_item to True
@@ -182,6 +182,8 @@ class OrderedList(object):
             self.head = temp
         # point the next reference of the new node
         # to the current node of the list
+        # point the next reference of the previous Node
+        # to the new node
         else:
             temp.setNext(current_node)
             previous_node.setNext(temp)
