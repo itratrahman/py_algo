@@ -27,7 +27,7 @@ def infix2postfix(infix_expr):
         # if the token is an operand, then append it to the end of the output list
         if token in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" or token in "0123456789":
             postfixList.append(token)
-        # ff the token is a left parenthesis,then push it to the stack_of_op
+        # if the token is a left parenthesis,then push it to the stack_of_op
         elif token == '(':
             stack_of_op.push(token)
         # if the token is a right parenthesis,
@@ -57,7 +57,7 @@ def infix2postfix(infix_expr):
 
     # return the postfix expression
     return postfix_expr
-    
+
 
 def compute_operation(operator, operand1, operand2):
     """
