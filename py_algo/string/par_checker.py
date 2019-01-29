@@ -59,13 +59,10 @@ def match_symbol(open, close):
 
 
 def par_checker(symbol_string):
-
     '''
-    a function for checking parenthesis
-
+    A function for checking parenthesis
     Arguments:
     symbol_string - string variable which needs to be check of balanced parenthesis
-
     Returns:
     boolean variable - True if the symbol_string is balanced or else False
     '''
