@@ -91,19 +91,19 @@ def _split_and_merge(list_of_items, verbose = False):
                 i += 1
             # if the ith elem of left half
             # is greater than jth elem of right half
-            # initialize the kth elem of list to ith elem of left half
+            # initialize the kth elem of list to jth elem of right half
             # increment the j by 1
             else:
                 list_of_items[k] = right_half[j]
                 j += 1
             # increment k by 1
             k += 1
-        # assign the left overs of left half of the merged list to the the original list
+        # assign the left overs of left half to the the original list
         while i < len(left_half):
             list_of_items[k] = left_half[i]
             i += 1
             k += 1
-        # assign the left overs of right half of the merged list to the the original list
+        # assign the left overs of right half to the the original list
         while j < len(right_half):
             list_of_items[k] = right_half[j]
             j += 1
@@ -138,6 +138,7 @@ def _split_and_partition(list_of_items,first_elem,last_elem):
     # if first element is less than last element
     # then recursively split and partion to sort
     if first_elem<last_elem:
+        # partion and compute split point
         splitpoint = partition(list_of_items,first_elem,last_elem)
         # recursive call on left and right of partition
         _split_and_partition(list_of_items,first_elem,splitpoint-1)
@@ -155,7 +156,7 @@ def partition(list_of_items,first_elem,last_elem):
 
     # a boolean variable to indicate whether a partition is found
     partition_found = False
-    # iterate until parition is not found
+    # iterate until parition is found
     while not partition_found:
         # increment left mark until we locate a value that is greater than the pivot
         while left_mark <= right_mark and list_of_items[left_mark] <= pivot:
@@ -171,7 +172,7 @@ def partition(list_of_items,first_elem,last_elem):
             temp = list_of_items[left_mark]
             list_of_items[left_mark] = list_of_items[right_mark]
             list_of_items[right_mark] = temp
-    # swap first element and right mark
+    # swap pivot element and right mark
     temp = list_of_items[first_elem]
     list_of_items[first_elem] = list_of_items[right_mark]
     list_of_items[right_mark] = temp

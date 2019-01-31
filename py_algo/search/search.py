@@ -92,14 +92,14 @@ def _binary_search_recursive(list_of_items, search_item):
     Returns:
     item_found - boolean variable to indicate whether the search item is found
     """
-    # if the list_of_items is zero then return False
+    # if the length of list_of_items is zero then return False
     if len(list_of_items) == 0:
         return False
     # or else search recursively
     else:
         # calculate index of the midpoint
         midpoint_index = len(list_of_items)//2
-        # if the item is found the return True
+        # if the midpoint item is the search item then return True
         if list_of_items[midpoint_index]==search_item:
             return True
         # else make recursive calls
