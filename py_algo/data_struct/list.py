@@ -90,7 +90,7 @@ class UnorderedList(object):
         current_node = self.head
         # boolean/indicator variable to indicate whether the search item is found
         found_item = False
-        # while we have not reached the first node and search item is not found
+        # while we have not reached the last node and search item is not found
         while current_node is not None and not found_item:
             # if the current node matches the search item
             # then set found_item to True
@@ -107,7 +107,7 @@ class UnorderedList(object):
         """
         Method to remove item from list
         """
-        # set teh current node to the head
+        # set the current node to the head
         current_node = self.head
         # set previous node to None
         previous_node = None
@@ -129,7 +129,7 @@ class UnorderedList(object):
         # case: when the first item is the item to be removed
         if previous_node is None:
             self.head = current_node.getNext()
-        # else set the previous node to the next node of the current Node
+        # else set the next node of current node to the next node of previos node
         # so that the current node is out of the list
         else:
             previous_node.setNext(current_node.getNext())
@@ -155,7 +155,7 @@ class OrderedList(object):
         """
         Method to add an item in correct order
         """
-        # set teh current node to the head
+        # set the current node to the head
         current_node = self.head
         # set previous node to None
         previous_node = None
@@ -165,7 +165,7 @@ class OrderedList(object):
         stop = False
         # iterate until current node points to None and stop condition is not reached
         while current_node is not None and not stop:
-            # if the current data is greater them item to be added then stop iterating
+            # if the current data is greater than item to be added then stop iterating
             if current_node.getData() >item:
                 stop = True
             # else push the current node and previous on node ahead
